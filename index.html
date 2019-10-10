@@ -7,83 +7,146 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Jonelle Lancaster Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/10e04e8707.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="body">
 
+    <div class="Navbar">
+        <div class="Navbar__Link Navbar__Link-brand">
+            Full Stack Java Developer
+        </div>
+        <div class="Navbar__Link-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav class="Navbar__Items">
+
+            <div class="Navbar__Link">
+                <a href="#aboutMe">About Me</a>
+            </div>
+            <div class="Navbar__Link">
+                <a href="#projects">Projects</a>
+            </div>
+            <div class="Navbar__Link">
+                <a href="#contact">Contact Me</a>
+            </div>
+        </nav>
+    </div>
 
 
-    <header>
+
+
+
+    <header id="header">
         <h1>Jonelle Lancaster</h1>
         <span>Professional Portfolio</span>
     </header>
     <main class="main">
 
+        <h2>About Me</h2>
         <section id="aboutMe">
-            <h2>About Me</h2>
-            <p>
-                <img src="./images/selfie.jpg">
-                I am passionate leader that is ready to take the tech world on. I have been in trade school management
-                for 16 years and have
-                a passion of leading and inspiring people. I love the tech industry and the agile environment it has
-                around it. I entered the industry through a Full-Stack Java Bootcamp. I am a student of life,
-                personal growth addict, team-player, always trying to think-outside of the box and then expand the box,
-                and always trying to build everyone around me.
+
+            <div id="slider">
+                <div id="slider-frame">
+
+                    <div id="slider-prev">PREV</div>
+                    <div id="slider-next">NEXT</div>
+
+                    <div id="slider-images">
+                        <div data-src="./images/selfie.jpg">
+                            Hello! I am Jonelle!
+                        </div>
+                        <div data-src="./images/mommabear.jpg">
+                            This is my son and I. He is 3 & loves cars!
+                        </div>
+                        <div data-src="./images/cub2.jpg">
+                            This is my daughter and I. She is almost 2 and loves her brother.
+                        </div>
+                        <div data-src="./images/meagain.jpg">
+                            I love musicals, reading, and fine bourbon.
+                        </div>
+                        <div data-src="./images/happy.jpg">
+                            Married for 7 years to my first love.
+                        </div>
+                    </div>
+                </div>
+                <div id="slider-caption">
+                    All about me.
+                </div>
+            </div>
 
 
-                <ul> Skills that may interest you
-                    <li>Java</li>
-                    <li>Spring</li>
-                    <li>MVC</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>TDD</li>
-                    <li>Object Oriented Programming (OOP)</li>
-                    <li>Git</li>
+
+            <ul> Skills that may interest you
+                <li>Java</li>
+                <li>Spring</li>
+                <li>MVC</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>TDD</li>
+                <li>Object Oriented Programming (OOP)</li>
+                <li>Git</li>
 
 
-                </ul>
+            </ul>
 
 
             </p>
         </section>
-        <section id="myprojects">
+        <p>
+            Learn more about <span id="modal-trigger" class="live">ME!</span>
+        </p>
+
+        <section>
             <h2>Projects</h2>
             <p>
-                These are a few of the projects that I am working on. Please visit my GitHub for more! Click the image
+                These are a few of the projects that I am working on. Please visit my GitHub for more! Click the
+                image
                 below to be redirected to my GitHub repository.
             </p>
             <div id="projects">
+
                 <article>
                     <h3>VirtualOrphanageAmok</h3>
                     <a href="https://github.com/jonellelancaster/virtual-orphanage-amok.git">
                         <img src="./images/amok.jpg" alt="Virtual-Orphanage-Amok"></a>
 
-                    <p>Virtual Orphange Amok is a cleaver console application that allows the user to take care of a
+                    <button>Show Description</button>
+                    <p>Virtual Orphange Amok is a cleaver console application that allows the user to
+                        take care of a
                         collection of babies in the Lonely Heart Orphange. </p>
 
                 </article>
+
                 <article>
                     <h3>Reviews</h3>
                     <a href="https://github.com/jonellelancaster/reviews.git">
                         <img src="./images/reviewjava.jpg">
                     </a>
 
-                    <p>This is a full stack website that give the user a list of reviews of local daycare facilities
+                    <button>Show Description</button>
+                    <p>This is a full stack website that give the user a list of reviews of local
+                        daycare facilities
                     </p>
 
                 </article>
+
                 <article>
-                    <h3>Project 3</h3>
+                    <h3>Fortune Teller</h3>
                     <a href="https://github.com/jonellelancaster/FortuneTeller.git">
                         <img src="./images/fortuneteller.jpg"></a>
 
-                    <p>This was my first project completed. Console application that tells the user their fortune based
+                    <button>Show Description</button>
+                    <p>This was my first project completed. Console application that tells the user
+                        their fortune
+                        based
                         on the data they input.</p>
 
                 </article>
             </div>
-            <section class="contact">
+
+
+            <section id="contact">
                 <h2>Contact Me</h2>
                 <ul>
                     <li>Email: jonellelancaster@gmail.com</li>
@@ -104,15 +167,35 @@
 
 
     </main>
-    <nav>
-        <a href="#aboutMe">About Me</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact Me</a>
-    </nav>
-    <footer>&copy; 2019 Jonelle Lancaster</footer>
 
 
 
+    <footer id="footer">&copy; 2019 Jonelle Lancaster</footer>
+
+
+    <div id="backdrop">
+        <div id="modal">
+            <button class="text-button">Close</button>
+            <h4>Jonelle's Bio</h4>
+
+            <div id="modal-content">
+                <p>
+                    I am passionate leader that is ready to take the tech world on. I have been in trade school
+                    management
+                    for 16 years and have
+                    a passion of leading and inspiring people. I love the tech industry and the agile
+                    environment it has
+                    around it. I entered the industry through a Full-Stack Java Bootcamp. I am a student of
+                    life,
+                    personal growth addict, team-player, always trying to think-outside of the box and then
+                    expand the
+                    box,
+                    and always trying to build everyone around me.
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="./app.js"></script>
 </body>
 
 </html>
