@@ -1,57 +1,90 @@
-(function () {
+var textWrapper = document.querySelector('.title');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-    setUpPage();
+anime.timeline({ loop: false })
+    .add({
+        targets: '.title .letter',
+        opacity: [0, 1],
+        easing: "easeInOutQuad",
+        duration: 2250,
+        delay: (el, i) => 150 * (i + 1)
+    }).add({
+        targets: '.title',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 5000
+    });
 
-    function setUpPage() {
+var textWrapper = document.querySelector('.title2');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-        addArticleEventListeners();
-        addWindowEventListeners();
-    }
+anime.timeline({ loop: false })
+    .add({
+        targets: '.title2 .letter',
+        opacity: [0, 1],
+        easing: "easeInOutQuad",
+        duration: 3000,
+        delay: (el, i) => 150 * (i + 1)
+    }).add({
+        targets: '.title2',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+    });
+var textWrapper = document.querySelector('.part3');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-    //toggle
-    function classToggle() {
-        const navs = document.querySelector('.Navbar__Items')
+anime.timeline({ loop: false })
+    .add({
+        targets: '.part3 .letter',
+        opacity: [0, 1],
+        easing: "easeInOutQuad",
+        duration: 4000,
+        delay: (el, i) => 150 * (i + 1)
+    }).add({
+        targets: '.part3',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+    });
+var textWrapper = document.querySelector('.header');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-        navs.classList.toggle('Navbar__ToggleShow');
-    }
+anime.timeline({ loop: false })
+    .add({
+        targets: '.header .letter',
+        opacity: [0, 1],
+        easing: "easeInOutQuad",
+        duration: 4000,
+        delay: (el, i) => 150 * (i + 1)
+    }).add({
+        targets: '.part3',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+    });
 
-    document.querySelector('.Navbar__Link-toggle')
-        .addEventListener('click', classToggle);
+var textWrapper = document.querySelector('.header2');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-
-    //descript drop down
-    function addArticleEventListeners() {
-
-        const articles = document.querySelectorAll('#projects article');
-
-        for (let article of articles) {
-            let button = article.querySelector('button');
-
-            button.addEventListener('click', function () {
-                article.querySelector("p").classList.toggle('expanded');
-                button.innerHTML = article.querySelector("p").classList.contains('expanded') ?
-                    'Hide Details' : 'Show Details';
-            });
-        }
-    }
-
-
-    function addWindowEventListeners() {
-
-        const windowResizeHandler = function () {
-
-            const nav = document.querySelector('nav');
-            nav.classList.remove('open');
-
-            const articles = document.querySelectorAll('#projects article');
-
-            for (let article of articles) {
-                article.classList.remove('expanded');
-            }
-        };
-
-        window.addEventListener('resize', windowResizeHandler);
-    }
+anime.timeline({ loop: false })
+    .add({
+        targets: '.header2 .letter',
+        opacity: [0, 1],
+        easing: "easeInOutQuad",
+        duration: 4000,
+        delay: (el, i) => 150 * (i + 1)
+    }).add({
+        targets: '.part3',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
+    });
 
 
-});
+

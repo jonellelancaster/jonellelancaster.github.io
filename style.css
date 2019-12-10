@@ -1,5 +1,5 @@
 *{
-    font-family:  Helvetica, Arial, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     line-height: 2em;
     box-sizing: border-box;
     margin:0;
@@ -23,268 +23,30 @@ html{
 
    
 }
-.body{
- 
-    background-image: url("./images/abstract-art-artistic-1095624.jpg");
-background-repeat: no-repeat;
-}
-  
-   
 
-
-
-
-h2,
-h3,
-h4,
-h5,
-h6{
-    color: var(--gunmet);
-}
-header,
-main,
-footer{
-    margin: 1em auto;
-    max-width: 900px;
-    
-}
-
-
-header{
-    text-align: center;
-    padding: 3em 1em; 
-    color: var(--drkgunmet);
-}
-header span{
-    font-size: 1.5em;
-    color: var(--gunmet);
-}
-
-
-.Navbar {
-  color: var(--lav);
-  display: flex;
-  align-items: column;
-  z-index: 2;
-  position:fixed;
-  top:0;
-  left:0;
-  width: 100vw;
-  background-image: linear-gradient(50deg, var(--purpt), var(--lav));
-  height: 3rem;
-  
-  
-  }
-  .Navbar__Items{
-      display:none;
-      
-  }
-  .Navbar__ToggleShow{
-    display: flex;
-  }
-  .Navbar__Link-toggle {
-      display:flex;
-    align-self: flex-end;
-    display: initial;
-    position: absolute;
-    cursor: pointer;
-    
-  }
- button{
-    box-shadow:inset 0px 1px 0px 0px #efdcfb;
-    background:linear-gradient(to bottom, var(--lav) 5%, var(--purpt) 100%);
-    background-color: var(--lavlt);
-    border-radius:6px;
-    border:1px solid var(--cata);
-    display:inline-block;
-    cursor:pointer;
-    color:#ffffff;
-    font-family:Arial;
-    font-size:15px;
-    font-weight:bold;
-    padding:6px 24px;
-    text-decoration:none;
-    text-shadow:0px 1px 0px var(--dust-pink);
-  }
-  button:hover {
-    background:linear-gradient(to bottom, var(--purpLt) 5%, var(--dust-pink) 100%);
-    background-color: var(--purpLt);
-  }
-  button:active {
-    position:relative;
-    top:1px;
-  }
-
-  
-nav a{
-    padding: 0.5em 2em;
-    color: var(--lav);
-    text-decoration: none;
-    
-
-}
- nav a:hover{
-color: var(--white);
-}
-section{
-    margin: 1em 0;
-    padding-top: 2em;
-    min-height: 15em;
-}
-section > p{
-    margin:1em;
-
-}
-section ul{
-    padding: 1.5em;
-
-}
-section img{
-    width: 200px;
-    height: 200px;
-   float:left;
-   border: 1px solid var(--drkgunmet);
-   margin: 1em;
-}
-#aboutMe{
-  display:flex;
-  flex-flow: row wrap;
-  align-items: flex-end;
-}
-
-  
-#projects{
-    display:grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-auto-rows: auto;  
-    grid-column-gap: 1em;
-}
-#projects article{
-    background: var(--lavlt);
-    padding: 2em;
-
-}
-#projects article img{
-    width: 100%;
-    border: 1px solid var(--gunmet);
-}
-#projects article p {
-  display:none;
-}
- #projects article p.expanded{
-  display:block;
-}
-
-
-#slider ::selection {
-    color: inherit;
-    background: transparent;
-  }
- 
-  
-  #slider-frame {
-    border: 1px solid var(--lavlt);
-    border-radius: 1px;
-    box-shadow: 0 0 5px #333;
-    position: relative;
-  }
-  
-  #slider-prev,
-  #slider-next {
-    width: 50%;
-    height: 30%;
-    position: absolute;
-    top: 0;
-    display: flex;
-    padding: 1em;
-    color: var(--lavlt);
-    font-weight: bold;
-    font-size: 12px;
-    text-shadow: 0 0 2px #000;
-    transition: 0.5s;
-    cursor: pointer;
-  }
-  
-  #slider-prev:hover,
-  #slider-next:hover {
-    background: rgba(255,255,255,0.3);
-  }
-  
-  #slider-prev {
-    left: 0;
-    flex-direction: row;
-    align-items: center;
-  }
-  
-  #slider-next {
-    right: 0;
-    flex-direction: row-reverse;
-    align-items: center;
-  }
-  
-  #slider-frame {
-    background: rgb(245, 237, 237);
+  .body{
+    background-image: url(./images/background.jpg);
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 15rem;
-    height: 15rem;
-  }
   
-  #slider-frame [data-src] {
-    display: none;
-  }
-  
-  #slider-caption {
-    margin-top: 5px;
-    border-radius: 3px;
-    border: 1px solid var(--gunmet);
-    padding: 0.2em 0.5em;
-    font-size: 0.8em;
-    text-align: center;
-    transition: 0.5s;
-    width: 15rem;
-  }
-  
-  #slider-caption.flash {
-    transition: 0s;
-    background: var(--lavlt);
-  }
-  #backdrop{
-    display: none;
-    height: 50vw;
-    width: 50vw;
-    border: var(--gunmet);
-    border-style: groove;
-    font-size: medium;
-    position:fixed;
-    top:0;
-    left:0;
-    background-color: #beb8ef;
-  }
-  #backdrop h4{
-    color: var(--drkgunmet);
-    font-size: large;
-
-  }
-  #backdrop.open{
-    display: block;
-  }
-  #modal{
-    margin: 3em;
-
-  }
-  
-  
-
-
-
-
-footer{
-    margin-top: 3em;
-    margin-bottom: 1em;
-    background-image: linear-gradient(50deg, var(--purpt), var(--lav));
-    color: var(--lav);
-    text-align: left;
-
 }
+
+.title {
+  font-weight: 900;
+  font-size: 4.5em;
+  color: var(--cata);
+ 
+}
+.title2{
+  font-weight: 900; 
+  font-size: 3.5em;
+  color: var(--cata);
+}
+
+.part3{
+  font-weight:900; 
+  font-size: 2.5em;
+  color: var(--cata);
+  
+}
+
+
