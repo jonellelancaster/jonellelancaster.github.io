@@ -1,0 +1,31 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 2em;
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    
+
+}
+
+html{
+    --lav: #beb8ef;
+    --lavlt: #e0ddf7;
+    --white: #ffffff;
+    --cata:#6d3b47;
+    --purpLt: #bc80ea;
+    --purpt:#4a3850;
+    --gunmet: #5a627c;
+    --drkgunmet: #293053;
+    --dust-pink: #fceef0;
+    font-size: 18px;
+  
+
+   
+}
+
+  .body{
+    background-image: url(./images/background.jpg);
+    background-repeat: no-repeat;
+  
+}

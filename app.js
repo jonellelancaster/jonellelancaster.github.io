@@ -1,3 +1,10 @@
+fadeInTitleOne();
+displayName();
+
+
+
+
+function fadeInTitleOne(){ 
 var textWrapper = document.querySelector('.title');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
@@ -13,7 +20,7 @@ anime.timeline({ loop: false })
         opacity: 0,
         duration: 1000,
         easing: "easeOutExpo",
-        delay: 5000
+        delay: 6000
     });
 
 var textWrapper = document.querySelector('.title2');
@@ -50,8 +57,11 @@ anime.timeline({ loop: false })
         easing: "easeOutExpo",
         delay: 1000
     });
-var textWrapper = document.querySelector('.header');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+   
+}
+    function displayName(){
+var headerWrapper = document.querySelector('.header');
+headerWrapper.innerHTML = headerWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
 anime.timeline({ loop: false })
     .add({
@@ -67,9 +77,9 @@ anime.timeline({ loop: false })
         easing: "easeOutExpo",
         delay: 1000
     });
-
-var textWrapper = document.querySelector('.header2');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+    
+var headerWrapper = document.querySelector('.header2');
+headerWrapper.innerHTML = headerWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
 anime.timeline({ loop: false })
     .add({
@@ -85,6 +95,6 @@ anime.timeline({ loop: false })
         easing: "easeOutExpo",
         delay: 1000
     });
-
+}
 
 

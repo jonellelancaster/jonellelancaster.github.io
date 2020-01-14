@@ -48,5 +48,9 @@ html{
   color: var(--cata);
   
 }
+#header{
+  font-weight: bolder;
+  color: var(--purpt);
+}
 
 
