@@ -1,5 +1,5 @@
 fadeInTitleOne();
-displayName();
+setTimeout (displayName(), 10000);
 
 
 
@@ -57,9 +57,10 @@ anime.timeline({ loop: false })
         easing: "easeOutExpo",
         delay: 1000
     });
+    //google sleep or wait
    
 }
-    function displayName(){
+     function displayName(){
 var headerWrapper = document.querySelector('.header');
 headerWrapper.innerHTML = headerWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
@@ -95,6 +96,6 @@ anime.timeline({ loop: false })
         easing: "easeOutExpo",
         delay: 1000
     });
-}
+};
 
 
