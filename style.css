@@ -25,7 +25,7 @@ html{
 }
 
   .body{
-    background-image: url(./images/background.jpg);
+    background-image: url('./images/background.jpg');
     background-repeat: no-repeat;
   
 }
@@ -53,4 +53,115 @@ html{
   color: var(--purpt);
 }
 
+#slider ::selection {
+  color: inherit;
+  background: transparent;
+}
 
+
+#slider-frame {
+  border: 1px solid var(--lavlt);
+  border-radius: 1px;
+  box-shadow: 0 0 5px #333;
+  position: relative;
+}
+
+#slider-prev,
+#slider-next {
+  width: 50%;
+  height: 30%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  padding: 1em;
+  color: var(--lavlt);
+  font-weight: bold;
+  font-size: 12px;
+  text-shadow: 0 0 2px #000;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+#slider-prev:hover,
+#slider-next:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+#slider-prev {
+  left: 0;
+  flex-direction: row;
+  align-items: center;
+}
+
+#slider-next {
+  right: 0;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+#slider-frame {
+  background: rgb(245, 237, 237);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 15rem;
+  height: 15rem;
+}
+
+#slider-frame [data-src] {
+  display: none;
+}
+
+#slider-caption {
+  margin-top: 5px;
+  border-radius: 3px;
+  border: 1px solid var(--gunmet);
+  padding: 0.2em 0.5em;
+  font-size: 0.8em;
+  text-align: center;
+  transition: 0.5s;
+  width: 15rem;
+}
+
+#slider-caption.flash {
+  transition: 0s;
+  background: var(--lavlt);
+}
+#backdrop{
+  display: none;
+  height: 50vw;
+  width: 50vw;
+  border: var(--gunmet);
+  border-style: groove;
+  font-size: medium;
+  position:fixed;
+  top:0;
+  left:0;
+  background-color: #beb8ef;
+}
+#backdrop h4{
+  color: var(--drkgunmet);
+  font-size: large;
+
+}
+#backdrop.open{
+  display: block;
+}
+#modal{
+  margin: 3em;
+
+}
+
+
+
+
+
+
+footer{
+  margin-top: 3em;
+  margin-bottom: 1em;
+  background-image: linear-gradient(50deg, var(--purpt), var(--lav));
+  color: var(--lav);
+  text-align: left;
+
+}

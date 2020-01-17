@@ -62,23 +62,23 @@
             displayNextSliderImage();
         }, 3000);
     }
-    //toggle
-    function classToggle() {
+    /*toggle
+   function classToggle() {
         const navs = document.querySelector('.Navbar__Items')
 
         navs.classList.toggle('Navbar__ToggleShow');
     }
 
     document.querySelector('.Navbar__Link-toggle')
-        .addEventListener('click', classToggle());
+        .addEventListener('click', classToggle);*/
 
 
 
 
 
 
-    // Modal can be opened
-    function addModalEventListeners() {
+        //  Modal can be opened
+        function addModalEventListeners() {
 
         const modalTriggerElement = document.querySelector('#modal-trigger');
 

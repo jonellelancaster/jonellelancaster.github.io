@@ -97,5 +97,13 @@ anime.timeline({ loop: false })
         delay: 1000
     });
 };
+  //toggle
+   function classToggle() {
+        const navs = document.querySelector('.Navbar__Items')
 
+        navs.classList.toggle('.Navbar__ToggleShow');
+    }
+
+    document.querySelector('.Navbar__Link-toggle')
+        .addEventListener('click', classToggle);
 
