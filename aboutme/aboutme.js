@@ -18,18 +18,21 @@
 
         const slides =
             Array.from(sliderFrame.querySelectorAll('div[data-src]'))
-                .map(div => {
-                    return {
-                        imageUrl: div.getAttribute('data-src'),
-                        caption: div.textContent.trim(),
-                    };
-                });
+            .map(div => {
+                return {
+                    imageUrl: div.getAttribute('data-src'),
+                    caption: div.textContent.trim(),
+                };
+            });
 
         let sliderIndex = 0;
         displaySliderImage();
 
         function displaySliderImage() {
-            let { imageUrl, caption } = slides[sliderIndex];
+            let {
+                imageUrl,
+                caption
+            } = slides[sliderIndex];
             sliderFrame.style.backgroundImage = `url('${imageUrl}')`;
             let count = `(${sliderIndex + 1}/${slides.length}) `;
             sliderCaption.innerHTML = count + caption;
@@ -77,8 +80,8 @@
 
 
 
-        //  Modal can be opened
-        function addModalEventListeners() {
+    //  Modal can be opened
+    function addModalEventListeners() {
 
         const modalTriggerElement = document.querySelector('#modal-trigger');
 

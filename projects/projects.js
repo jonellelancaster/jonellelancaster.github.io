@@ -20,18 +20,21 @@
 
         const slides =
             Array.from(sliderFrame.querySelectorAll('div[data-src]'))
-                .map(div => {
-                    return {
-                        imageUrl: div.getAttribute('data-src'),
-                        caption: div.textContent.trim(),
-                    };
-                });
+            .map(div => {
+                return {
+                    imageUrl: div.getAttribute('data-src'),
+                    caption: div.textContent.trim(),
+                };
+            });
 
         let sliderIndex = 0;
         displaySliderImage();
 
         function displaySliderImage() {
-            let { imageUrl, caption } = slides[sliderIndex];
+            let {
+                imageUrl,
+                caption
+            } = slides[sliderIndex];
             sliderFrame.style.backgroundImage = `url('${imageUrl}')`;
             let count = `(${sliderIndex + 1}/${slides.length}) `;
             sliderCaption.innerHTML = count + caption;
@@ -64,15 +67,6 @@
             displayNextSliderImage();
         }, 3000);
     }
-    //toggle
-    function classToggle() {
-        const navs = document.querySelector('.Navbar__Items')
-
-        navs.classList.toggle('Navbar__ToggleShow');
-    }
-
-    document.querySelector('.Navbar__Link-toggle')
-        .addEventListener('click', classToggle);
 
 
     //descript drop down
@@ -86,7 +80,7 @@
             button.addEventListener('click', function () {
                 article.querySelector("p").classList.toggle('expanded');
                 button.innerHTML = article.querySelector("p").classList.contains('expanded') ?
-                    'Hide Details' : 'Show Details';
+                    'Hide Description' : 'Show Description';
             });
         }
     }
@@ -107,4 +101,6 @@
         };
 
         window.addEventListener('resize', windowResizeHandler);
+
     }
+})

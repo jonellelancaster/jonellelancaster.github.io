@@ -1,5 +1,7 @@
 fadeInTitleOne();
-setTimeout (displayName(), 10000);
+
+    displayName();
+
 
 
 
@@ -107,3 +109,6 @@ anime.timeline({ loop: false })
     document.querySelector('.Navbar__Link-toggle')
         .addEventListener('click', classToggle);
 
+        const sleep = (milliseconds) => {
+            return new Promise(resolve => setTimeout(resolve, milliseconds))
+          }
