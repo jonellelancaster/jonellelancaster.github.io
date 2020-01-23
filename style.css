@@ -149,7 +149,8 @@ section img{
 #aboutMe{
   display:flex;
   flex-flow: row wrap;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
 }
 
   
@@ -274,6 +275,7 @@ section img{
     margin: 3em;
 
   }
+  
   
   
 
